@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>{{text}}</p>
+  <ion-list>
+    <ion-item *ngFor="let btn of buttons | keys">
+      <button class="navButtons" ion-button color="light" (click)="goToPage(btn.value['navButton'+btn.key]['pageType'],btn.value['navButton'+btn.key]['pageInstance'])">{{btn.value['navButton'+btn.key]['text']}}</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
