@@ -12,13 +12,23 @@
     width: 100%;
     font-weight: bold;
     color: #fff;
+    background-color: rgba(0,0,0,0.3) ;
+    //color: #387ef5;
   }
-
+  ion-card{
+    width:100%;
+    margin-top:0%;
+  }
+  .btn{
+    background-color: white;
+    padding:0%;
+  }
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
     top: 52%;
-    width: 100%;
+    left: 40%;
+    width: 20%;
     color: #fff;
   }
 

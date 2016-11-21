@@ -10,12 +10,24 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>contact-us</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <img src={{image1}} width="100%" height="auto" />
+  <ion-list no-lines>
+    <ion-item>
+      PhoneNumber: {{phoneNumber}}
+    </ion-item>
+    <ion-item>
+      Email: {{email}}
+    </ion-item>
+    <ion-item>
+      Website: {{website}}
+    </ion-item>
+  </ion-list>
+  <div id="BottomPics"><img src={{image2}} width="20%" height="auto" /><img src={{image3}} width="20%" height="auto" /></div>
 </ion-content>

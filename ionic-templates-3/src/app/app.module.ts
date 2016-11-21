@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { ProductsPage } from '../pages/products/products';
+import { CategoryPage } from '../pages/category/category';
 
 import { IconfigProvider } from '../providers/iconfig-provider';
 
@@ -15,7 +16,8 @@ import {MapToIterable} from '../services/pipes';
     HomePage,
     ContactUsPage,
     ProductsPage,
-    MapToIterable
+    MapToIterable,
+    CategoryPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -25,7 +27,8 @@ import {MapToIterable} from '../services/pipes';
     MyApp,
     HomePage,
     ProductsPage,
-    ContactUsPage
+    ContactUsPage,
+    CategoryPage
   ],
   providers: [IconfigProvider]
 })

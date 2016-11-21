@@ -1,0 +1,240 @@
+{
+  "Application":{
+    "title": "Restaurant application template",
+    "Authors":[
+      "Ali Al Obaji"
+    ],
+    "page":[
+      {
+        "page1":{
+          "page-name":"Home/About page",
+          "default-instance": "0",
+          "instance":[
+            {
+              "instance1":{
+                "title": "Home Page",
+                "Logo":"../../assets/images/logo.png",
+                "aboutUs":"We are a new restaurant on Bliss Street Lebanon. We sell everything from quick sandwiches to T-Bone steaks. Everyone is welcome 24/7 and any day of the week."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "page2":{
+          "page-name": "Contact info page",
+          "default-instance": "0",
+          "instance":[
+            {
+              "instance1":{
+                "title":"Contact US",
+                "image1":"../../assets/images/logo.png",
+                "image2":"../../assets/images/phonecall.png",
+                "image3":"../../assets/images/email.png",
+                "phoneNumber": "01/235285",
+                "email": "restaurant@hotmail.com",
+                "website": "www.restaurantBliss.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "page3":{
+          "page-name": "Menu Page",
+          "default-instance": "0",
+          "instance":[
+            {
+              "instance1":{
+                "title": "Food Categories",
+                "foodCategory":[
+                  {
+                    "foodCategory0":{
+                      "id": "0",
+                      "title": "Burgers",
+                      "image": "../../assets/images/burger.jpg",
+                      "foodItem":[
+                        {
+                          "foodItem0":{
+                            "id": "0",
+                            "title": "CheeseBurger",
+                            "price": "5,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem1":{
+                            "id": "1",
+                            "title": "HamBurger",
+                            "price": "5,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem2":{
+                            "id": "2",
+                            "title": "Mushroom 'n' Swiss",
+                            "price": "6,000 LL",
+                            "portion": "One Person"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "foodCategory1":{
+                      "id": "1",
+                      "title": "Pizzas",
+                      "image": "../../assets/images/pizza.jpg",
+                      "foodItem":[
+                        {
+                          "foodItem0":{
+                            "id": "0",
+                            "title": "vegetarian",
+                            "price": "8,000 LL",
+                            "portion": "Two People"
+                          }
+                        },
+                        {
+                          "foodItem1":{
+                            "id": "1",
+                            "title": "Pepperoni",
+                            "price": "10,000 LL",
+                            "portion": "Two People"
+                          }
+                        },
+                        {
+                          "foodItem2":{
+                            "id": "2",
+                            "title": "Margharita",
+                            "price": "8,000 LL",
+                            "portion": "Two People"
+                          }
+                        },
+                        {
+                          "foodItem3":{
+                            "id": "3",
+                            "title": "Barbecue Chicken",
+                            "price": "10,000 LL",
+                            "portion": "Two People"
+                          }
+                        },
+                        {
+                          "foodItem4":{
+                            "id": "4",
+                            "title": "Giant Pizza",
+                            "price": "15,000 LL",
+                            "portion": "Four People"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "foodCategory2":{
+                      "id": "2",
+                      "title": "Appetizers",
+                      "image": "../../assets/images/appet.jpg",
+                      "foodItem":[
+                        {
+                          "foodItem0":{
+                            "id": "0",
+                            "title": "Soup",
+                            "price": "4,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem1":{
+                            "id": "1",
+                            "title": "Cheese Rolls",
+                            "price": "8,000 LL",
+                            "portion": "Two People"
+                          }
+                        },
+                        {
+                          "foodItem2":{
+                            "id": "2",
+                            "title": "French Fries",
+                            "price": "4,000 LL",
+                            "portion": "Two People"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "foodCategory3":{
+                      "id": "3",
+                      "title": "Desserts",
+                      "image": "../../assets/images/desserts.jpg",
+                      "foodItem":[
+                        {
+                          "foodItem0":{
+                            "id": "0",
+                            "title": "Lemon Cake",
+                            "price": "4,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem1":{
+                            "id": "1",
+                            "title": "CheeseCake",
+                            "price": "6,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem2":{
+                            "id": "2",
+                            "title": "Cookie",
+                            "price": "3,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem3":{
+                            "id": "3",
+                            "title": "Fruit Basket",
+                            "price": "10,000 LL",
+                            "portion": "Five Person"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "foodCategory4":{
+                      "id": "4",
+                      "title": "Salads",
+                      "image": "../../assets/images/salad.jpg",
+                      "foodItem":[
+                        {
+                          "foodItem0":{
+                            "id": "0",
+                            "title": "Ceaser salad",
+                            "price": "4,000 LL",
+                            "portion": "One Person"
+                          }
+                        },
+                        {
+                          "foodItem1":{
+                            "id": "1",
+                            "title": "Tabbouleh",
+                            "price": "4,000 LL",
+                            "portion": "One Person"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

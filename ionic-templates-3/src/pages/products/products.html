@@ -16,12 +16,22 @@
 </ion-header>
 
 
-<ion-content  class="card-background-page">
-  <ion-card>
-    <img src="{{image}}"/>
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card>
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col   width-50  *ngFor="let c of categories | keys" >
+        <button class="btn" (click)="goToCategory(c.value['foodCategory'+c.key])">
+          <ion-card>
+            <img src="{{c.value['foodCategory'+c.key]['image']}}"/>
+            <div class="card-title">{{c.value['foodCategory'+c.key]['title']}}</div>
+            <!--<button ion-button class="card-subtitle">View</button>-->
+          </ion-card>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>
 
 <ion-footer>
