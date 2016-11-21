@@ -1,0 +1,25 @@
+{
+  "Application":{
+    "title": "Single Button Application",
+    "Authors":[
+      "Ali Al Obaji"
+    ],
+    "page":[
+      {
+        "page1":{
+          "page-name": "Home Page",
+          "default-instance": "0",
+          "instance":[
+            {
+              "instance1":{
+                "title":"Home Page",
+                "button":"Click Me!",
+                "text":"Hello World! This is a simple template which we will use as case study for our application!"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
