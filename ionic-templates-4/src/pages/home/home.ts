@@ -39,9 +39,10 @@ export class HomePage {
       ( err ) => {console.log(err);},
       () => {
         this.IconfigProvider.setJsonContent(this.jsonContent);
+        this.setJsonLocally();
       }
     );
-    this.setJsonLocally();
+
 
     this.setChartMetaData();
   };
