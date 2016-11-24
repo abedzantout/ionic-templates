@@ -13,7 +13,16 @@
             {
               "instance1":{
                 "title":"Home Page",
-                "button":"Click Me!",
+                "button":{
+                  "text": "Click me!",
+                  "toastText": "Button clicked!",
+                  "toastPosition": "bottom"
+                },
+                "checkBox":{
+                  "text": "Im a check box",
+                  "toastText": "Check Box Ticked!",
+                  "toastPosition": "top"
+                },
                 "text":"Hello World! This is a simple template which we will use as case study for our application!"
               }
             }

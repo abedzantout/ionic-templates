@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 import{ IconfigProvider } from '../../providers/iconfig-provider';
 
@@ -13,10 +14,17 @@ export class Page1 {
   private jsonContent: Object;
 
   private title: string;
-  private button: string;
-  private text: string;
 
-  constructor(public navCtrl: NavController, private IconfigProvider:IconfigProvider) {
+  private buttonText: string;
+  private text: string;
+  private buttonToastText: string;
+  private buttonToastPosition: string;
+
+  private CBText: string;
+  private CBToastText: string;
+  private CBToastPosition: string;
+
+  constructor(public navCtrl: NavController, private IconfigProvider:IconfigProvider,public toastCtrl: ToastController) {
 
 
     //this snippet of code retrieves the iconfig.json content from our profivder.
@@ -39,9 +47,23 @@ export class Page1 {
     let DI = content['default-instance'];
     let instance = content['instance'][DI]['instance'.concat((+DI+1).toString())];
     this.title = instance['title'];
-    this.button = instance['button'];
+    this.buttonText = instance['button']['text'];
+    this.buttonToastText = instance['button']['toastText'];
+    this.buttonToastPosition = instance['button']['toastPosition'];
+    this.CBText = instance['checkBox']['text'];
+    this.CBToastText = instance['checkBox']['toastText'];
+    this.CBToastPosition = instance['checkBox']['toastPosition'];
     this.text = instance['text'];
 
+  }
+
+  presentToast(message: string, position: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000,
+      position: position
+    });
+    toast.present();
   }
 
 }
