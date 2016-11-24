@@ -1,16 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Chart } from 'ng2-chartjs2';
-
 import { IconfigProvider } from '../../providers/iconfig-provider';
 
-/*
- Generated class for the Home page.
-
- See http://ionicframework.com/docs/v2/components/#navigation for more info on
- Ionic pages and navigation.
- */
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -36,7 +28,7 @@ export class HomePage implements OnInit {
         this.labelBGColors     = [];
         this.labelBorderColors = [];
 
-        //this snippet of code retrieves the iconfig.json content from our profivder.
+        //this snippet of code retrieves the iconfig.json content from our provider.
         this.jsonContent = this.IconfigProvider.getJson().subscribe(
             ( data ) => {this.jsonContent = data;},
             ( err ) => {console.log(err);},
