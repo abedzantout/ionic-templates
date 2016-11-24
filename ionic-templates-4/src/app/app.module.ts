@@ -6,10 +6,15 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 
+import { IconfigProvider } from '../providers/iconfig-provider';
+
+import { MapToIterable } from '../services/pipes';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    MapToIterable
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -20,6 +25,6 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},IconfigProvider]
 })
 export class AppModule {}

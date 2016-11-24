@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,5 +15,5 @@
 
 <ion-content padding>
   <p>This is a simple Ionic Application which displays some charts that are fully customizable by the user.</p>
-  <chart [labels]="labels" [data]="data" [type]='chartType'></chart>
+  <chart [labels]="labels" [data]="data" [type]="chartType"></chart>
 </ion-content>

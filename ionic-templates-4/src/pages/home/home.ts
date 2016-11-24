@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import { Chart } from 'ng2-chartjs2';
 
+import { IconfigProvider } from '../../providers/iconfig-provider';
+
 /*
   Generated class for the Home page.
 
@@ -14,42 +16,79 @@ import { Chart } from 'ng2-chartjs2';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  private labelColours: string[];
-  private chartType: string;
-  labels: string[];
-  data: Chart.Dataset[] = [
-    {
-      label: '# of Votes',
-      // fontColor: '#000000',
-      data: [12, 19, 3, 5, 2, 3],
-      // colours:
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
-      ],
-      borderWidth: 1
-    }
-  ];
 
-  constructor(public navCtrl: NavController) {
-    this.labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
+  private jsonContent: Object;
+
+  private title: string;
+  private labelBGColors:  Array<string>;
+  private labelBorderColors: Array<string>;
+  private chartType: string;
+  private labels: Array<string>;
+  private data: Chart.Dataset[];
+
+  constructor(public navCtrl: NavController, private IconfigProvider:IconfigProvider) {
+
+    this.labels = [];
+    this.labelBGColors = [];
+    this.labelBorderColors = [];
     this.chartType = "bar";
+
+    //this snippet of code retrieves the iconfig.json content from our profivder.
+    this.jsonContent = this.IconfigProvider.getJson().subscribe(
+      ( data ) => {this.jsonContent = data;},
+      ( err ) => {console.log(err);},
+      () => {
+        this.IconfigProvider.setJsonContent(this.jsonContent);
+      }
+    );
+    this.setJsonLocally();
+
+    this.setChartMetaData();
+  };
+
+  setChartMetaData(){
+    this.data = [{
+      label:  '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor : this.labelBGColors,
+      borderColor: this.labelBorderColors,
+      borderWidth: 1
+    }];
   }
 
-  ionViewDidLoad() {
-    console.log('Hello HomePage Page');
+  //this method sets the local variables of the component according to the iconfig file.
+  private setJsonLocally() {
+    this.jsonContent    = JSON.parse(this.IconfigProvider.getJsonContent());
+    let content = this.jsonContent['Application']['page'][0]['home'];
+    let instance = content['default-instance'];
+    this.title = instance['title'];
+    //this.chartType = instance['chartType'];
+    console.log(this.chartType);
+    this.fillLabels(instance['labels']);
+    this.fillBGColors(instance['labelBGColors']);
+    this.fillBGBorders(instance['labelBorderColors']);
+    console.log(Number(instance['labelBorderWidth']) + 1);
+  }
+
+
+
+
+   private fillLabels(arr: Array<any>){
+    for(var i =0; i < arr.length; i++){
+      this.labels.push(arr[i]['labels'+i]);
+    }
+  }
+
+  private fillBGColors(arr: Array<any>){
+    for(var i =0; i < arr.length; i++){
+       this.labelBGColors.push(arr[i]['labelBGColors'+i]);
+    }
+  }
+
+  private fillBGBorders(arr: Array<any>){
+    for(var i =0; i < arr.length; i++){
+       this.labelBorderColors.push(arr[i]['labelBorderColors'+i]);
+    }
   }
 
 }

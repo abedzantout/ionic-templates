@@ -1,0 +1,79 @@
+{
+  "Application":{
+    "title": "Ionic Chart Application Template",
+    "Authors": [
+      "Ali Al Obaji"
+    ],
+    "page":[
+      {
+        "home":{
+          "page-name": "Home Page",
+          "default-instance":{
+            "title": "Home",
+            "chartType": "pie",
+            "labels":[
+              {
+                "labels0":"Red"
+              },
+              {
+                "labels1":"Blue"
+              },
+              {
+                "labels2":"Yellow"
+              },
+              {
+                "labels3":"Green"
+              },
+              {
+                "labels4":"Purple"
+              },
+              {
+                "labels5":"Orange"
+              }
+            ],
+            "labelBGColors":[
+              {
+                "labelBGColors0": "rgba(255, 99, 132, 0.2)"
+              },
+              {
+                "labelBGColors1": "rgba(54, 162, 235, 0.2)"
+              },
+              {
+                "labelBGColors2": "rgba(255, 206, 86, 0.2)"
+              },
+              {
+                "labelBGColors3": "rgba(75, 192, 192, 0.2)"
+              },
+              {
+                "labelBGColors4": "rgba(153, 102, 255, 0.2)"
+              },
+              {
+                "labelBGColors5": "rgba(255, 159, 64, 0.2)"
+              }
+            ],
+            "labelBorderColors":[
+              {
+                "labelBorderColors0": "rgba(255,99,132,1)"
+              },
+              {
+                "labelBorderColors1": "rgba(54, 162, 235, 1)"
+              },
+              {
+                "labelBorderColors2": "rgba(255, 206, 86, 1)"
+              },
+              {
+                "labelBorderColors3": "rgba(75, 192, 192, 1)"
+              },
+              {
+                "labelBorderColors4": "rgba(153, 102, 255, 1)"
+              },
+              {
+                "labelBorderColors5": "rgba(255, 159, 64, 1)"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
