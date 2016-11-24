@@ -31,7 +31,7 @@ export class HomePage {
     this.labels = [];
     this.labelBGColors = [];
     this.labelBorderColors = [];
-    this.chartType = "bar";
+    this.chartType = "radar";
 
     //this snippet of code retrieves the iconfig.json content from our profivder.
     this.jsonContent = this.IconfigProvider.getJson().subscribe(
@@ -63,7 +63,7 @@ export class HomePage {
     let content = this.jsonContent['Application']['page'][0]['home'];
     let instance = content['default-instance'];
     this.title = instance['title'];
-    //this.chartType = instance['chartType'];
+    this.chartType = instance['chartType'];
     console.log(this.chartType);
     this.fillLabels(instance['labels']);
     this.fillBGColors(instance['labelBGColors']);
