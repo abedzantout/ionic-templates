@@ -6,13 +6,14 @@ import { ToastController } from 'ionic-angular';
 import{ IconfigProvider } from '../../providers/iconfig-provider';
 
 @Component({
-  selector: 'page-page1',
-  templateUrl: 'page1.html'
+    selector: 'page-page1',
+    templateUrl: 'page1.html'
 })
 export class Page1 {
 
-  private jsonContent: Object;
+    private jsonContent: Object;
 
+<<<<<<< Updated upstream
   private title: string;
 
   private buttonText: string;
@@ -25,21 +26,29 @@ export class Page1 {
   private CBToastPosition: string;
 
   constructor(public navCtrl: NavController, private IconfigProvider:IconfigProvider,public toastCtrl: ToastController) {
+=======
+    private title: string;
+    private button: string;
+    private text: string;
+
+    constructor( public navCtrl: NavController, private IconfigProvider: IconfigProvider ) {
+>>>>>>> Stashed changes
 
 
-    //this snippet of code retrieves the iconfig.json content from our profivder.
-    this.jsonContent = this.IconfigProvider.getJson().subscribe(
-      ( data ) => {this.jsonContent = data;},
-      ( err ) => {console.log(err);},
-      () => {
-        this.IconfigProvider.setJsonContent(this.jsonContent);
-        this.setJsonLocally();
-      }
-    );
+        //this snippet of code retrieves the iconfig.json content from our profivder.
+        this.jsonContent = this.IconfigProvider.getJson().subscribe(
+            ( data ) => {this.jsonContent = data;},
+            ( err ) => {console.log(err);},
+            () => {
+                this.IconfigProvider.setJsonContent(this.jsonContent);
+                this.setJsonLocally();
+            }
+        );
 
-  }
+    }
 
 
+<<<<<<< Updated upstream
   //this method sets the local variables of the component according to the iconfig file.
   private setJsonLocally() {
     this.jsonContent    = JSON.parse(this.IconfigProvider.getJsonContent());
@@ -54,8 +63,19 @@ export class Page1 {
     this.CBToastText = instance['checkBox']['toastText'];
     this.CBToastPosition = instance['checkBox']['toastPosition'];
     this.text = instance['text'];
+=======
+    //this method sets the local variables of the component according to the iconfig file.
+    private setJsonLocally() {
+        this.jsonContent = JSON.parse(this.IconfigProvider.getJsonContent());
+        let content      = this.jsonContent[ 'Application' ][ 'page' ][ 0 ][ 'page1' ];
+        let DI           = content[ 'default-instance' ];
+        let instance     = content[ 'instance' ][ DI ][ 'instance'.concat((+DI + 1).toString()) ];
+        this.title       = instance[ 'title' ];
+        this.button      = instance[ 'button' ];
+        this.text        = instance[ 'text' ];
+>>>>>>> Stashed changes
 
-  }
+    }
 
   presentToast(message: string, position: string) {
     let toast = this.toastCtrl.create({

@@ -16,9 +16,7 @@ export class IconfigProvider {
 
   private jsonContent: Object;
 
-  constructor(public http: Http) {
-    this.getJson();
-  }
+  constructor(public http: Http) {}
 
   getJson() {
     return this.http.get('assets/iconfig.json').map(( res: Response ) =>res);

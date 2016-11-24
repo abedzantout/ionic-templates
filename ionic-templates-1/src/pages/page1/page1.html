@@ -1,13 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>{{title}}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+    </ion-navbar>
 </ion-header>
 <ion-content padding>
+<<<<<<< Updated upstream
   <p>{{text}}</p>
   <button ion-button secondary id="myButton" (click)="presentToast(buttonToastText,buttonToastPosition)">{{buttonText}}</button>
   <ion-item>
     <ion-label>{{CBText}}</ion-label>
     <ion-checkbox color="dark" checked="true" (click)="presentToast(CBToastText,CBToastPosition)"></ion-checkbox>
   </ion-item>
+=======
+    <p>{{text}}</p>
+    <button ion-button secondary id="myButton">{{button}}</button>
+>>>>>>> Stashed changes
 </ion-content>

@@ -1,81 +1,81 @@
 {
-  "Application":{
-    "title": "Ionic Template 2",
-    "Authors":[
-      "Ali Al Obaji"
-    ],
-    "page":[
-      {
-        "page1":{
-          "page-name": "home",
-          "default-instance": "0",
-          "instance":[
-            {
-              "instance1":{
-                "title": "page 1 Instance 0",
-                "text": "This is a simple Ionic app template which demonstrates how to Dynamically link buttons with components and navigate to them",
-                "navButton":[
-                  {
-                    "navButton0":{
-                      "text": "Go to Page1",
-                      "pageType": "2",
-                      "pageInstance": "0"
-                    }
-                  },
-                  {
-                    "navButton1":{
-                      "text": "Go to Page2",
-                      "pageType": "2",
-                      "pageInstance": "1"
-                    }
-                  },
-                  {
-                    "navButton2":{
-                      "text": "Go to Page3",
-                      "pageType": "3",
-                      "pageInstance": "0"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-       "page2":{
-         "page-name": "utility Page",
-         "default-instance": "0",
-         "instance":[
-           {
-             "instance1":{
-               "title": "page 2 instance 0",
-               "text": "We have reached this page by clicking on the corresponding button in Page 1."
-              }
-           },
-           {
-             "instance2":{
-               "title": "page 2 instance 1",
-               "text": "We have reached this page by clicking on the corresponding button in Page 1."
-             }
-           }
-         ]
-       }
-      },
-      {
-        "page3":{
-          "page-name": "utility page 2",
-          "default-instance": "0",
-          "instance":[
-            {
-              "instance1":{
-                "title": "page 3 instance 0",
-                "text": "We have reached this page by clicking on the corresponding button in Page 1."
-              }
-            }
-          ]
-        }
-      }
-    ]
+  "Application": {
+	"title": "Ionic Template 2",
+	"Authors": [
+	  "Ali Al Obaji"
+	],
+	"page": [
+	  {
+		"page1": {
+		  "page-name": "home",
+		  "default-instance": "0",
+		  "instance": [
+			{
+			  "instance1": {
+				"title": "page 1 Instance 0",
+				"text": "This is a simple Ionic app template which demonstrates how to Dynamically link buttons with components and navigate to them",
+				"navButton": [
+				  {
+					"navButton0": {
+					  "text": "Go to Page1",
+					  "pageType": "2",
+					  "pageInstance": "0"
+					}
+				  },
+				  {
+					"navButton1": {
+					  "text": "Go to Page2",
+					  "pageType": "2",
+					  "pageInstance": "1"
+					}
+				  },
+				  {
+					"navButton2": {
+					  "text": "Go to Page3",
+					  "pageType": "3",
+					  "pageInstance": "0"
+					}
+				  }
+				]
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"page2": {
+		  "page-name": "utility Page",
+		  "default-instance": "0",
+		  "instance": [
+			{
+			  "instance1": {
+				"title": "page 2 instance 0",
+				"text": "We have reached this page by clicking on the corresponding button in Page 1."
+			  }
+			},
+			{
+			  "instance2": {
+				"title": "page 2 instance 1",
+				"text": "We have reached this page by clicking on the corresponding button in Page 1."
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"page3": {
+		  "page-name": "utility page 2",
+		  "default-instance": "0",
+		  "instance": [
+			{
+			  "instance1": {
+				"title": "page 3 instance 0",
+				"text": "We have reached this page by clicking on the corresponding button in Page 1."
+			  }
+			}
+		  ]
+		}
+	  }
+	]
   }
 }
