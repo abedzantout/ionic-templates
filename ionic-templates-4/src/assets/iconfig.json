@@ -10,7 +10,7 @@
           "page-name": "Home Page",
           "default-instance":{
             "title": "Home",
-            "chartType": "radar",
+            "chartType": "bar",
             "labels":[
               {
                 "labels0":"Red"

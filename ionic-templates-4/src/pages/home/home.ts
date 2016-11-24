@@ -27,7 +27,7 @@ export class HomePage implements OnInit {
         this.labels            = [];
         this.labelBGColors     = [];
         this.labelBorderColors = [];
-
+ 
         //this snippet of code retrieves the iconfig.json content from our provider.
         this.jsonContent = this.IconfigProvider.getJson().subscribe(
             ( data ) => {this.jsonContent = data;},
