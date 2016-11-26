@@ -16,7 +16,8 @@
             },
             "Default-Marker":{
               "Latitude": "33.9011",
-              "Longitude": "35.4811"
+              "Longitude": "35.4811",
+              "title": "Default Marker"
             }
           }
         }

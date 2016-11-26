@@ -41,7 +41,6 @@ export class HomePage implements OnInit {
     };
 
     ngOnInit() {
-        console.log('ngOnInit triggered');
         this.setChartMetaData();
     }
 
@@ -57,7 +56,6 @@ export class HomePage implements OnInit {
 
     //this method sets the local variables of the component according to the iconfig file.
     private setJsonLocally() {
-        console.log('setJsonLocally triggered like a feminist');
         this.jsonContent = JSON.parse(this.IconfigProvider.getJsonContent());
         let content      = this.jsonContent[ 'Application' ][ 'page' ][ 0 ][ 'home' ];
         let instance     = content[ 'default-instance' ];
