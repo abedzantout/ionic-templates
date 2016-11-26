@@ -1,0 +1,26 @@
+{
+  "Application":{
+    "title": "Ionic Google Maps Template",
+    "Authors": [
+      "Ali Al Obaji"
+    ],
+    "page":[
+      {
+        "home":{
+          "page-name":"Map Page",
+          "default-instance":{
+            "title": "Map Page",
+            "Map-Center":{
+              "Latitude": "33.9011",
+              "Longitude": "35.4811"
+            },
+            "Default-Marker":{
+              "Latitude": "33.9011",
+              "Longitude": "35.4811"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
