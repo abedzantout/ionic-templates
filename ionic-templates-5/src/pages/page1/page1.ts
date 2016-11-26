@@ -1,38 +1,40 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
-import {NavController} from 'ionic-angular';
+import { Platform } from 'ionic-angular';
+
+import { GoogleMap, GoogleMapsLatLng, GoogleMapsMarkerOptions } from 'ionic-native';
 
 
-declare var google;
+
+import { NavController } from 'ionic-angular';
+declare var google: any;
 @Component({
   selector: 'page-page1',
   templateUrl: 'page1.html'
 })
 export class Page1 {
-  @ViewChild('map') mapElement:ElementRef;
-  map:any;
+  @ViewChild('mapCanvas') mapElement: ElementRef;
+  public map: GoogleMap;
+  public platform : any;
 
 
-  constructor(public navCtrl:NavController) {
+  constructor(public navCtrl: NavController,platform: Platform) {
 
+    this.platform = platform;
+    this.initializeMap();
   }
 
-  ionViewLoaded() {
-    this.loadMap();
+
+  initializeMap() {
+
+    this.platform.ready().then(() => {
+      var minZoomLevel = 12;
+
+      this.map = new google.maps.Map(document.getElementById('map_canvas'), {
+        zoom: minZoomLevel,
+        center: new google.maps.LatLng(33.9011, 35.4811),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+    });
   }
-  loadMap(){
-
-    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
-
-    let mapOptions = {
-      center: latLng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-    
-
-  }
-
 }
