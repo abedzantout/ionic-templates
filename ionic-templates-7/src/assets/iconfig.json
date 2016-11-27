@@ -1,0 +1,18 @@
+{
+  "Application":{
+    "title": "Ticket Booker",
+    "Authors": [
+      "Ali Al Obaji"
+    ],
+    "page":[
+      {
+        "home":{
+          "page-name": "Home Page",
+          "default-instance":{
+            "title": "Home"
+          }
+        }
+      }
+    ]
+  }
+}

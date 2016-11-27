@@ -1,0 +1,197 @@
+{
+  "Application": {
+    "title": "Ionic",
+    "authors": [
+      "Abbas",
+      "Abed"
+    ],
+    "page": [
+      {
+        "home": {
+          "page-name": "menu",
+          "default-instance": {
+            "title": "ionic test",
+            "content": [
+              {
+                "content0": {
+                  "title": "Menu",
+                  "component": "MenuPage"
+                }
+              },
+              {
+                "content1": {
+                  "title": "About us",
+                  "component": "AboutUsPage"
+                }
+              },
+              {
+                "content2": {
+                  "title": "feedback",
+                  "component": "FeedbackPage"
+                }
+              }
+            ]
+          },
+          "instance": [
+            {
+              "b": {
+                "title": "fuck you abbas",
+                "content": [
+                  {
+                    "content0": {
+                      "title": "Menu",
+                      "component": "MenuPage"
+                    }
+                  },
+                  {
+                    "content1": {
+                      "title": "About us",
+                      "component": "AboutUsPage"
+                    }
+                  },
+                  {
+                    "content2": {
+                      "title": "feedback",
+                      "component": "FeedbackPage"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "feedback": {
+          "page-name": "feedback",
+          "default-instance": {
+            "title": "feedback",
+            "content": [
+              {
+                "input0": {
+                  "input": "asdfhjkl"
+                }
+              }
+            ],
+            "buttons": [
+              {
+                "button0": {
+                  "buttonText": "HomePage",
+                  "value": "HomePage",
+                  "linksTo": "p1i0"
+                }
+              },
+              {
+                "button1": {
+                  "buttonText": "HomePage",
+                  "value": "HomePage",
+                  "linksTo": "p0i0"
+                }
+              }
+            ]
+          },
+          "instance": [
+            {
+              "e": {
+                "title": "feedback",
+                "content": [
+                  {
+                    "input0": {
+                      "input": "asdfhjkl"
+                    }
+                  }
+                ],
+                "buttons": [
+                  {
+                    "button0": {
+                      "buttonText": "HomePage",
+                      "value": "HomePage",
+                      "linksTo": "p1i0"
+                    }
+                  },
+                  {
+                    "button1": {
+                      "buttonText": "HomePage",
+                      "value": "HomePage",
+                      "linksTo": "p0i0"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "aaaaaa": {
+                "title": "feedback",
+                "content": [
+                  {
+                    "input0": {
+                      "input": "asdfhjkl"
+                    }
+                  }
+                ],
+                "buttons": [
+                  {
+                    "button0": {
+                      "buttonText": "HomePage",
+                      "value": "HomePage",
+                      "linksTo": "p1i0"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Restaurant Menu": {
+          "page-name": "Menu",
+          "default-instance": {
+            "title": "Menu",
+            "content": [
+              {
+                "content0": {
+                  "name": "Lasagne",
+                  "image": "../../assets/images/lasagne.jpg",
+                  "description": "Italian Pasta."
+                }
+              },
+              {
+                "content1": {
+                  "name": "kebab",
+                  "image": "../../assets/images/kebab.jpg",
+                  "description": "Turkish grilled meat."
+                }
+              },
+              {
+                "content2": {
+                  "name": "humus",
+                  "image": "../../assets/images/humus.jpg",
+                  "description": "Lebanese cold starter."
+                }
+              }
+            ]
+          },
+          "instance": []
+        }
+      },
+      {
+        "about": {
+          "page-name": "about",
+          "default-instance": {
+            "title": "About Us",
+            "content": [
+              {
+                "content0": {
+                  "headerText": "Restaurant Name",
+                  "image": "../../assets/images/restaurant.jpg",
+                  "description": "We are a restaurant in bliss street"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

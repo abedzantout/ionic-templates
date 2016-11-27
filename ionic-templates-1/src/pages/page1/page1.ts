@@ -7,7 +7,7 @@ import{ IconfigProvider } from '../../providers/iconfig-provider';
 
 @Component({
     selector: 'page-page1',
-    templateUrl: 'page1.html'
+    templateUrl: 'home.html'
 })
 export class Page1 {
 
