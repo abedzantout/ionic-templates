@@ -20,7 +20,13 @@ export class EventsPage {
   private eventJsonContent: Object;
 
   private title: string;
-  private Events: Array<any>;
+  private navColor: string;
+  private Events: Array<any>; //this holds all the events.
+
+  private displayedEvents: Array<any>; //this holds the events that are currently being displayed.
+
+
+  private searchQuery: string = ''; //input entered into the search bar.
 
   constructor(public navCtrl: NavController, private IconfigProvider: IconfigProvider,private EventsProvider: EventsProvider) {
     this.Events = [];
@@ -41,6 +47,8 @@ export class EventsPage {
       () => {
         this.EventsProvider.setJsonContent(this.eventJsonContent);
         this.getEventsData();
+        this.initializeEvents();
+
       }
     );
   }
@@ -51,14 +59,40 @@ export class EventsPage {
     let content      = this.jsonContent[ 'Application' ][ 'page' ][ 1 ][ 'events' ];
     let instance     = content[ 'default-instance' ];
     this.title       = instance[ 'title' ];
+    this.navColor    = instance['navColor'];
   }
 
+  //this function retrieves the Events data from its corresponding json file.
   private getEventsData(){
     this.eventJsonContent = JSON.parse(this.EventsProvider.getJsonContent());
     let eventsArr = this.eventJsonContent['events'];
     for(let i =0; i < eventsArr.length;i++){
       // console.log(eventsArr[i]);
       this.Events.push(eventsArr[i]);
+    }
+  }
+
+  //this function re-initializes the displayedEvents array to all the events. Useful for the search bar.
+  private  initializeEvents() {
+    this.displayedEvents = this.Events;
+  }
+
+  //this function is called whenever an input in the search bar is entered. It updates the 'displayedEvents' array accordingly
+  private  getEvents(ev: any) {
+    // Reset items back to all of the items
+    this.initializeEvents();
+
+    // set val to the value of the searchbar
+    let val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      // for(let i =0; i< this.Events.length; i++){
+      //   if(this.Events[i].title == val)
+      // }
+      this.displayedEvents = this.displayedEvents.filter((item) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
     }
   }
 }

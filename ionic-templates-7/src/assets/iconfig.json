@@ -4,12 +4,14 @@
     "Authors": [
       "Ali Al Obaji"
     ],
+    "navColor": "dark",
     "page":[
       {
         "home":{
           "page-name": "Home Page",
           "default-instance":{
             "title": "Home",
+            "navColor": "dark",
             "Logo": "../../assets/images/logo.png"
           }
         }
@@ -18,7 +20,8 @@
         "events":{
           "events-page": "Events",
           "default-instance":{
-            "title": "Upcoming Events"
+            "title": "Upcoming Events",
+            "navColor": "dark"
           }
         }
       }

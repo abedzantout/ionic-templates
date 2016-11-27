@@ -5,6 +5,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import { EventsPage } from '../pages/events/events';
 
+import { IconfigProvider } from '../providers/iconfig-provider';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +18,10 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  private jsonContent: Object;
+  private navColor: string;
+
+  constructor(public platform: Platform, private IconfigProvider: IconfigProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -24,6 +29,16 @@ export class MyApp {
       { title: 'Home Page', component: HomePage },
       { title: 'Events', component: EventsPage }
     ];
+
+    //this function prepares the iconfig.json for parsing.
+    this.jsonContent = this.IconfigProvider.getJson().subscribe(
+      ( data ) => {this.jsonContent = data;},
+      ( err ) => {console.log(err);},
+      () => {
+        this.IconfigProvider.setJsonContent(this.jsonContent);
+        this.setJsonLocally();
+      }
+    );
 
   }
 
@@ -40,5 +55,12 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  //this method sets the local variables of the component according to the iconfig file.
+  private setJsonLocally() {
+    this.jsonContent = JSON.parse(this.IconfigProvider.getJsonContent());
+    let content      = this.jsonContent[ 'Application' ];
+    this.navColor    = content['navColor'];
   }
 }
