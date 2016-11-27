@@ -9,7 +9,16 @@
         "home":{
           "page-name": "Home Page",
           "default-instance":{
-            "title": "Home"
+            "title": "Home",
+            "Logo": "../../assets/images/logo.png"
+          }
+        }
+      },
+      {
+        "events":{
+          "events-page": "Events",
+          "default-instance":{
+            "title": "Upcoming Events"
           }
         }
       }

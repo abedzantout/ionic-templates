@@ -2,9 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { Page2 } from '../pages/page2/page2';
+import { EventsPage } from '../pages/events/events';
 
 import { IconfigProvider } from '../providers/iconfig-provider';
+import { EventsProvider } from '../providers/events-provider';
 
 import { MapToIterable } from '../services/pipes';
 
@@ -12,7 +13,7 @@ import { MapToIterable } from '../services/pipes';
   declarations: [
     MyApp,
     HomePage,
-    Page2,
+    EventsPage,
     MapToIterable
   ],
   imports: [
@@ -22,8 +23,8 @@ import { MapToIterable } from '../services/pipes';
   entryComponents: [
     MyApp,
     HomePage,
-    Page2
+    EventsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},IconfigProvider]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},IconfigProvider,EventsProvider]
 })
 export class AppModule {}

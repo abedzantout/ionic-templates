@@ -1,0 +1,55 @@
+{
+  "events": [
+    {
+      "title": "Dancing with the stars",
+      "image": "../../assets/images/events/dancingwiththestars.jpg",
+      "venue": "MTV",
+      "Dates": "27 Nov 2016 - 04 Dec 2016",
+      "Time": "5:30 pm",
+      "Tickets-remaining": "64",
+      "lat": " 53.2734",
+      "lng": "-7.77832031"
+    },
+    {
+      "title": "Dragon Circus",
+      "image": "../../assets/images/events/dragoncircus.jpg",
+      "venue": "Facing Forum de Beyrouth",
+      "Dates": "27 Nov 2016 - 04 Dec 2016",
+      "Time": "11:00 AM",
+      "Tickets-remaining": "64",
+      "lat": "32",
+      "lng": "54"
+    },
+    {
+      "title": "Faradan Inno",
+      "image": "../../assets/images/events/faradaninno.jpg",
+      "venue": "Theatre Monnot",
+      "Dates": "27 Nov 2016 - 04 Dec 2016",
+      "Time": " 08:30 PM",
+      "Tickets-remaining": "64",
+      "lat": "32",
+      "lng": "54"
+    },
+    {
+      "title": "JOS Workshops",
+      "image": "../../assets/images/events/josworkshops.jpg",
+      "venue": "Workshops",
+      "Dates": "27 Nov 2016",
+      "Time": " 08:30 PM",
+      "Tickets-remaining": "64",
+      "lat": "32",
+      "lng": "54"
+    },
+    {
+      "title": "RAMY AYACH",
+      "image": "../../assets/images/events/ramyayach.jpg",
+      "venue": "Casino du Liban",
+      "Dates": "09 Dec 2016",
+      "Time": "20:30",
+      "Tickets-remaining": "64",
+      "lat": "32",
+      "lng": "54"
+    }
+  ]
+}
+

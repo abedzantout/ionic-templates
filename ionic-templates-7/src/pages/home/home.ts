@@ -13,6 +13,7 @@ export class HomePage {
   private jsonContent: Object;
 
   private title: string;
+  private logo: string;
 
   constructor(public navCtrl: NavController, private IconfigProvider: IconfigProvider ) {
 
@@ -34,6 +35,7 @@ export class HomePage {
     let content      = this.jsonContent[ 'Application' ][ 'page' ][ 0 ][ 'home' ];
     let instance     = content[ 'default-instance' ];
     this.title       = instance[ 'title' ];
+    this.logo        = instance['Logo'];
   }
 
 }
