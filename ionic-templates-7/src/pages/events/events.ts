@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { EventDetailPage } from '../../pages/event-detail/event-detail';
+
 import { IconfigProvider } from '../../providers/iconfig-provider';
 import { EventsProvider } from '../../providers/events-provider';
 
@@ -94,5 +96,10 @@ export class EventsPage {
         return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
+
+  //this function is used for navigation into event details page
+  private viewDetails(e){
+    this.navCtrl.push(EventDetailPage,{any:e});
   }
 }
