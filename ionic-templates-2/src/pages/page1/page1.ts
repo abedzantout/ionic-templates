@@ -9,10 +9,9 @@ import { IconfigProvider } from '../../providers/iconfig-provider';
 
 @Component({
     selector: 'page-page1',
-    templateUrl: 'home.html'
+    templateUrl: 'page1.html'
 })
 export class Page1 {
-
     private jsonContent: Object;
 
     //this array contains all the page components.

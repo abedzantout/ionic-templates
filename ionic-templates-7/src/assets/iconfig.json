@@ -12,7 +12,11 @@
           "default-instance":{
             "title": "Home",
             "navColor": "dark",
-            "Logo": "../../assets/images/logo.png"
+            "footerText": "www.ticketingboxoffice.com",
+            "FABColor": "danger",
+            "FABIcon": "share",
+            "Logo": "../../assets/images/logo.png",
+            "text": "We are an international ticketing office company, localized to Lebanon. We provide tickets to all the major events."
           }
         }
       },

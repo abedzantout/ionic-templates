@@ -13,8 +13,12 @@ export class HomePage {
   private jsonContent: Object;
 
   private title: string;
+  private text: string;
   private navColor: string;
+  private FABColor: string;
   private logo: string;
+  private FABIcon: string;
+  private footerText: string;
 
   constructor(public navCtrl: NavController, private IconfigProvider: IconfigProvider ) {
 
@@ -37,7 +41,11 @@ export class HomePage {
     let instance     = content[ 'default-instance' ];
     this.title       = instance[ 'title' ];
     this.navColor    = instance['navColor'];
+    this.FABColor    = instance['FABColor'];
     this.logo        = instance['Logo'];
+    this.text        = instance['text'];
+    this.FABIcon     = instance['FABIcon'];
+    this.footerText  = instance['footerText'];
   }
 
 }

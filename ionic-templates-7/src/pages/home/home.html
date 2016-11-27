@@ -9,6 +9,20 @@
 
 <ion-content padding>
   <img src={{logo}} width="100%" height="auto" />
-  <h3>Ionic Menu Starter</h3>
+  <h3>{{text}}</h3>
+  <ion-fab top right edge>
+    <button ion-fab mini color="{{FABColor}}"><ion-icon name="{{FABIcon}}"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title id="footer">{{footerText}}</ion-title>
+  </ion-toolbar>
+</ion-footer>
