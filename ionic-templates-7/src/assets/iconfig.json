@@ -22,10 +22,18 @@
       },
       {
         "events":{
-          "events-page": "Events",
+          "page-name": "Events",
           "default-instance":{
             "title": "Upcoming Events",
             "navColor": "dark"
+          }
+        }
+      },
+      {
+        "eventDetails":{
+          "page-name": "Item-Details",
+          "default-instance":{
+            "showLocationButton": "Show Location"
           }
         }
       }
