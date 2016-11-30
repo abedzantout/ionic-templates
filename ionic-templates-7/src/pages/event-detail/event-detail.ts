@@ -15,6 +15,6 @@ export class EventDetailPage {
   private Event: any;
 
   constructor(public navCtrl: NavController, private NavParams:NavParams) {
-    this.Event = this.NavParams.get('e');
+    this.Event = this.NavParams.get('Object');
   }
 }

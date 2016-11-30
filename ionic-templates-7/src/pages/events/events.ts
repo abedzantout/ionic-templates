@@ -89,9 +89,6 @@ export class EventsPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      // for(let i =0; i< this.Events.length; i++){
-      //   if(this.Events[i].title == val)
-      // }
       this.displayedEvents = this.displayedEvents.filter((item) => {
         return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
@@ -100,6 +97,6 @@ export class EventsPage {
 
   //this function is used for navigation into event details page
   private viewDetails(e){
-    this.navCtrl.push(EventDetailPage,{any:e});
+    this.navCtrl.push(EventDetailPage,{Object:e});
   }
 }
